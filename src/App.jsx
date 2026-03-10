@@ -9,6 +9,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 import Chatbot from './components/Chatbot';
+import CookieBanner from './components/CookieBanner';
 
 function ScrollTop() {
   const { pathname } = useLocation();
@@ -31,6 +32,7 @@ export default function App() {
       </Routes>
       <Footer />
       <Chatbot />
+      <CookieBanner />
     </Router>
   );
 }

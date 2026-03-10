@@ -98,6 +98,15 @@ export default function Admin() {
     useEffect(() => {
         checkLockout();
 
+        // Prevent Search Engines from indexing the admin panel
+        let meta = document.querySelector('meta[name="robots"]');
+        if (!meta) {
+            meta = document.createElement('meta');
+            meta.name = "robots";
+            document.head.appendChild(meta);
+        }
+        meta.content = "noindex, nofollow";
+
         // Check session
         if (sessionStorage.getItem('adminAuth')) {
             setIsAuth(true);

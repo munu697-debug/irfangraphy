@@ -27,25 +27,7 @@ export default function CookieBanner() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: 100, opacity: 0 }}
                     transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                    style={{
-                        position: 'fixed',
-                        bottom: '20px',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        backgroundColor: 'rgba(13, 17, 32, 0.95)',
-                        border: '1px solid var(--border)',
-                        backdropFilter: 'blur(10px)',
-                        padding: '1.5rem',
-                        borderRadius: '16px',
-                        boxShadow: 'var(--shadow-deep)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        gap: '2rem',
-                        zIndex: 9999,
-                        width: 'calc(100% - 40px)',
-                        maxWidth: '650px',
-                    }}
+                    className="cookie-banner"
                 >
                     <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
                         We use cookies to ensure you get the best experience on our site, including advanced security measures and site analytics.
@@ -54,7 +36,7 @@ export default function CookieBanner() {
                     <button
                         onClick={handleAccept}
                         className="btn-gold"
-                        style={{ padding: '0.8rem 1.75rem', flexShrink: 0 }}
+                        style={{ padding: '0.8rem 1.75rem', flexShrink: 0, whiteSpace: 'nowrap' }}
                     >
                         Accept
                     </button>

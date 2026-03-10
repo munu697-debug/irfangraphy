@@ -241,6 +241,28 @@ button {
   opacity: 1;
 }
 
+/* ── Cookie Banner ── */
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) !important;
+  background-color: rgba(13, 17, 32, 0.95);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-deep);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  z-index: 9999;
+  width: calc(100% - 40px);
+  max-width: 650px;
+}
+
 /* ── Responsive ── */
 @media (min-width: 1600px) {
   html {
@@ -279,6 +301,14 @@ button {
   :root {
     --sp-lg: 2.5rem;
     --sp-xl: 4rem;
+  }
+
+  .cookie-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    bottom: 15px;
   }
 }
 
